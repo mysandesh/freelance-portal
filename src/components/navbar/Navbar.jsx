@@ -1,16 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const [active, setActive] = useState(false);
+
   return (
-    <div className="navbar">
+    <div className={active ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
           {/* <Link to="/"> */}
           <span className="text">Freelance Portal</span>
-          <span className="dot">.</span>
           {/* </Link> */}
+          <span className="dot">.</span>
         </div>
         <div className="links">
           <span>Freelance Business</span>
@@ -21,11 +24,15 @@ const Navbar = () => {
           <button>Join</button>
         </div>
       </div>
-      <hr />
-      <div className="menu">
-        <span>Test</span>
-        <span>Test</span>
-      </div>
+      {active && (
+        <>
+          <hr />
+          <div className="menu">
+            <span>Test</span>
+            <span>Test</span>
+          </div>
+        </>
+      )}
     </div>
   );
 };

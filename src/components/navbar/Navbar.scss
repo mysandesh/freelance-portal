@@ -5,6 +5,11 @@
   background-color: #013914;
   color: white;
 
+  &.active {
+    background-color: white;
+    color: black;
+  }
+
   .container {
     width: 1400px;
     display: flex;
@@ -15,8 +20,8 @@
       font-size: 34px;
       font-weight: bold;
 
-      .text {
-      }
+      // .text {
+      // }
       .dot {
         color: #17bf73;
       }
