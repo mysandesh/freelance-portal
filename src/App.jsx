@@ -10,6 +10,7 @@ import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
 import MyGigs from "./pages/mygigs/MyGigs";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import "./app.scss";
 
 function App() {
   const Layout = () => {

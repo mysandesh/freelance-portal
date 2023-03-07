@@ -29,7 +29,7 @@ const Navbar = () => {
     <div className={active ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
-          <Link to="/">
+          <Link to="/" className="link">
             <span className="text">Freelance Portal</span>
           </Link>
           <span className="dot">.</span>
