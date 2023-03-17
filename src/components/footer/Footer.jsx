@@ -86,6 +86,7 @@ const Footer = () => {
               <img src="/img/coin.png" alt="" />
               <span>USD</span>
             </div>
+            <img src="/img/accessibility.png" alt="" />
           </div>
         </div>
       </div>
