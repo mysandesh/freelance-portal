@@ -78,6 +78,10 @@ const Footer = () => {
               <img src="/img/pinterest.png" alt="" />
               <img src="/img/instagram.png" alt="" />
             </div>
+            <div className="link">
+              <img src="/img/language.png" alt="" />
+              <span>English</span>
+            </div>
           </div>
         </div>
       </div>
