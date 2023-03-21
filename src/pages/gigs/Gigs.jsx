@@ -24,6 +24,11 @@ const Gigs = () => {
             <div className="right">
               <span className="sortBy">Sort By</span>
               <span className="sortType">Best Selling</span>
+              <img src="./img/down.png" alt="" />
+              <div className="rightMenu">
+                <span>Newest</span>
+                <span>Best Selling</span>
+              </div>
             </div>
           </div>
         </div>
