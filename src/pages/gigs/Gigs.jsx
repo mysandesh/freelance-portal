@@ -15,7 +15,12 @@ const Gigs = () => {
             Artists
           </p>
           <div className="menu">
-            <div className="left"></div>
+            <div className="left">
+              <span>Budget</span>
+              <input type="text" placeholder="min" />
+              <input type="text" placeholder="max" />
+              <button>Apply</button>
+            </div>
             <div className="right"></div>
           </div>
         </div>
