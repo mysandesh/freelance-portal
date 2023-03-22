@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Gigs.scss";
-
+import { gigs } from "../../data";
+import GigCard from "../../components/gigCard/GigCard";
 const Gigs = () => {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <div className="gigs">
@@ -24,11 +26,13 @@ const Gigs = () => {
             <div className="right">
               <span className="sortBy">Sort By</span>
               <span className="sortType">Best Selling</span>
-              <img src="./img/down.png" alt="" />
-              <div className="rightMenu">
-                <span>Newest</span>
-                <span>Best Selling</span>
-              </div>
+              <img src="./img/down.png" alt="" onClick={() => setOpen(!open)} />
+              {open && (
+                <div className="rightMenu">
+                  <span>Newest</span>
+                  <span>Best Selling</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
