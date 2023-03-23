@@ -1,5 +1,6 @@
 import React from "react";
 import "./GigCard.scss";
+import { Link } from "react-router-dom";
 
 const GigCard = ({ item }) => {
   return (
