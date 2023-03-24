@@ -47,6 +47,11 @@ const Gigs = () => {
               )}
             </div>
           </div>
+          <div className="cards">
+            {gigs.map((gig) => (
+              <GigCard key={gig.id} item={gig} />
+            ))}
+          </div>
         </div>
       </div>
     </>
