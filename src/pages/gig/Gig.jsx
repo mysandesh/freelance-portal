@@ -23,7 +23,7 @@ const Gig = () => {
               <span>5</span>
             </div>
           </div>
-          <Slider slidesToShow={1} arrowsScroll={1}>
+          <Slider slidesToShow={1} arrowsScroll={1} className="slider">
             <img
               src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
@@ -237,7 +237,12 @@ const Gig = () => {
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="price">
+            <h3>1 AI generated image</h3>
+            <h2>$ 59.99</h2>
+          </div>
+        </div>
       </div>
     </div>
   );
