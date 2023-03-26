@@ -7,7 +7,7 @@ const Add = () => {
       <div className="container">
         <h1>Add New Gig</h1>
         <div className="sections">
-          <div className="left">
+          <div className="info">
             <label htmlFor="">Title</label>
             <input
               type="text"
