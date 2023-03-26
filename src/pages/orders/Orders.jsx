@@ -3,6 +3,11 @@ import "./Orders.scss";
 import { Link } from "react-router-dom";
 
 const Orders = () => {
+  const currentUser = {
+    id: 1,
+    username: "John Doe",
+    isSeller: true,
+  };
   return (
     <div className="orders">
       <div className="container">
@@ -14,8 +19,8 @@ const Orders = () => {
             <th>Imagine</th>
             <th>Title</th>
             <th>Price</th>
-            <th>Sales</th>
-            <th>Action</th>
+            <th>{currentUser?.isSeller ? "Buyer" : "Seller"}</th>
+            <th>Contact</th>
           </tr>
           <tr>
             <td>
@@ -31,7 +36,7 @@ const Orders = () => {
             </td>
             <td>13</td>
             <td>
-              <img className="delete" src="./img/delete.png" alt="" />
+              <img className="delete" src="./img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -48,7 +53,7 @@ const Orders = () => {
             </td>
             <td>41</td>
             <td>
-              <img className="delete" src="./img/delete.png" alt="" />
+              <img className="delete" src="./img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -65,7 +70,7 @@ const Orders = () => {
             </td>
             <td>55</td>
             <td>
-              <img className="delete" src="./img/delete.png" alt="" />
+              <img className="delete" src="./img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -82,7 +87,7 @@ const Orders = () => {
             </td>
             <td>29</td>
             <td>
-              <img className="delete" src="./img/delete.png" alt="" />
+              <img className="delete" src="./img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -99,7 +104,7 @@ const Orders = () => {
             </td>
             <td>34</td>
             <td>
-              <img className="delete" src="./img/delete.png" alt="" />
+              <img className="delete" src="./img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -116,7 +121,7 @@ const Orders = () => {
             </td>
             <td>16</td>
             <td>
-              <img className="delete" src="./img/delete.png" alt="" />
+              <img className="delete" src="./img/message.png" alt="" />
             </td>
           </tr>
         </table>
