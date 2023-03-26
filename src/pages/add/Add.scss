@@ -1,4 +1,15 @@
 .add {
   display: flex;
   justify-content: center;
+  .container {
+    width: 1400px;
+    padding: 50px 0px;
+
+    h1 {
+      width: max-content;
+      margin-bottom: 30px;
+      color: gray;
+      font-weight: 300;
+    }
+  }
 }
