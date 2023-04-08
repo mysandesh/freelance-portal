@@ -1,3 +1,5 @@
+import User from "../models/user.model.js";
+
 export const register = async (req, res) => {
   try {
     const newUser = new User({
@@ -7,7 +9,7 @@ export const register = async (req, res) => {
       country: "test",
     });
     await newUser.save();
-    register.status(201).send("User has been registered");
+    res.status(201).send("User has been registered");
   } catch (err) {
     res.status(500).send("Something went seriously wrong!");
   }
