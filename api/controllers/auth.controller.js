@@ -17,6 +17,11 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
+    const user = await User.findOne({ username: req.body.username });
+    if (!user) return register.status(404).send("User not found");
+
+    const isCorrect = bcrypt.compareSync(req.body.password, user.password);
+    if (!isCorrect) return res.status(404).send("Wrong password or username");
   } catch (err) {
     res.status(500).send("Something went wrong with login!");
   }
