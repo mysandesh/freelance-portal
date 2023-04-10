@@ -15,6 +15,11 @@ export const register = async (req, res) => {
   }
 };
 
-export const login = async (req, res) => {};
+export const login = async (req, res) => {
+  try {
+  } catch (err) {
+    res.status(500).send("Something went wrong with login!");
+  }
+};
 
 export const logout = async (req, res) => {};
