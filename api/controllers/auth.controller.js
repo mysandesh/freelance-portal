@@ -33,7 +33,12 @@ export const login = async (req, res) => {
     );
 
     const { password, ...info } = user._doc;
-    res.status(200).send(info);
+    res
+      .cookie("accessToken", token, {
+        httpOnly: true,
+      })
+      .status(200)
+      .send(info);
   } catch (err) {
     res.status(500).send("Something went wrong with login!");
   }
