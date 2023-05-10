@@ -1,6 +1,6 @@
 # Freelance Portal App
 
-Frelancing Portal App for Job Providers and Freelancers
+Frelancing Jobs Portal App for Job Providers and Freelancers
 
 ## Usage
 
