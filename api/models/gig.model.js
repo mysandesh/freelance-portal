@@ -59,7 +59,7 @@ const GigSchema = new Schema(
       type: [String],
       required: false,
     },
-    salesNumber: {
+    sales: {
       type: Number,
       default: 0,
     },
