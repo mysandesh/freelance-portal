@@ -4,7 +4,7 @@ Frelancing Jobs Portal App for Job Providers and Freelancers seeking jobs.
 
 ## Usage
 
-Frontend Client and Backend API for Freelancing Project
+Frontend Client and Backend API for Freelancing Project App.
 
 ### Install
 
