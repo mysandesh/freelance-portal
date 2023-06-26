@@ -2,7 +2,7 @@ import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-export const register = async (req, res) => {
+export const register = async (req, res, next) => {
   try {
     const hash = bcrypt.hashSync(req.body.password, 5);
     const newUser = new User({
@@ -12,7 +12,7 @@ export const register = async (req, res) => {
     await newUser.save();
     res.status(201).send("User has been registered");
   } catch (err) {
-    res.status(500).send("Something went seriously wrong!");
+    next(err);
   }
 };
 
