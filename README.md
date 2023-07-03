@@ -6,7 +6,7 @@ Frelancing Jobs Portal App for Job Providers and Freelancers seeking jobs.
 
 Frontend Client and Backend API for Freelancing Project App.
 
-### Install
+### Install Insturctions
 
 1. Install the dependencies using 'yarn install' command on the API folder
 2. Install the dependencies using 'npm install' command on the Client folder
