@@ -1,4 +1,7 @@
-export const verifyToken = (req, res) => {
+import jwt from "jsonwebtoken";
+import createError from "../utils/createError.js";
+
+export const verifyToken = (req, res, next) => {
   const token = req.cookies.accessToken;
   if (!token) return res.status(401).send("You are not authenticated.");
 
