@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.scss";
 import axios from "axios";
 
@@ -9,10 +9,16 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("localhost:8800/api/auth/login", {
-      username,
-      password,
-    });
+    try {
+      const res = await axios.post("http://localhost:8800/api/auth/login", {
+        username,
+        password,
+      });
+      console.log(res.data);
+    } catch (err) {
+      setError(err);
+      console.log(err);
+    }
   };
 
   return (
