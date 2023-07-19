@@ -17,4 +17,4 @@ Frontend Client and Backend API for Freelancing Project App.
 1. Navigate to API folder and run the Backend Server API with 'yarn start' command
 2. Navigate to the Client folder and run the Frontend Client Server with 'npm run dev' command to start the development server.
 
-This will start the Backend, Frontend and MongoDB.
+This will start the Backend, Frontend and MongoDB servers.
