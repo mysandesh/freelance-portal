@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.scss";
 import axios from "axios";
+import newRequest from "../../utils/newRequest";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -10,14 +11,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        "http://localhost:8800/api/auth/login",
-        {
-          username,
-          password,
-        },
-        { withCredentails: true }
-      );
+      const res = await newRequest.post("/auth/login", { username, password });
+
       console.log(res.data);
     } catch (err) {
       setError(err);
