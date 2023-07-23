@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Login.scss";
-import axios from "axios";
 import newRequest from "../../utils/newRequest";
 
 const Login = () => {
