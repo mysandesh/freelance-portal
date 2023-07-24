@@ -10,12 +10,11 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await newRequest.post("/auth/login", { username, password });
+      await newRequest.post("/auth/login", { username, password });
 
       console.log(res.data);
     } catch (err) {
-      setError(err);
-      console.log(err);
+      setError(err.response.data);
     }
   };
 
@@ -38,6 +37,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
+        {error && error}
       </form>
     </div>
   );
