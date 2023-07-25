@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await newRequest.post("/auth/login", { username, password });
+      const res = await newRequest.post("/auth/login", { username, password });
 
       console.log(res.data);
     } catch (err) {
