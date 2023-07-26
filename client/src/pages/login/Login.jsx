@@ -3,7 +3,7 @@ import "./Login.scss";
 import newRequest from "../../utils/newRequest";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -44,6 +44,6 @@ const Login = () => {
       </form>
     </div>
   );
-};
+}
 
 export default Login;
