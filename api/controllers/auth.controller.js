@@ -47,11 +47,11 @@ export const login = async (req, res, next) => {
 };
 
 export const logout = async (req, res) => {
-  res.clearCookie("accessToken"),
-    {
+  res
+    .clearCookie("accessToken", {
       sameSite: "none",
       secure: true,
-    }
-      .status(200)
-      .send("User has successfully logged out");
+    })
+    .status(200)
+    .send("User has successfully logged out");
 };
