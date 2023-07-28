@@ -22,6 +22,13 @@ const Navbar = () => {
   }, []);
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const handleLogout = async () => {
+    try {
+      await newRequest.post("/auth/logout");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
@@ -61,7 +68,7 @@ const Navbar = () => {
                   <Link className="link" to="/messages">
                     Messages
                   </Link>
-                  <Link className="link" to="/">
+                  <Link className="link" onClick={handleLogout}>
                     Logout
                   </Link>
                 </div>
