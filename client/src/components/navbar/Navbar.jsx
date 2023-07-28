@@ -50,8 +50,8 @@ const Navbar = () => {
           <span>English</span>
 
           {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {!currentUser && <button>Join</button>}
-          {currentUser && (
+
+          {currentUser ? (
             <div className="user" onClick={() => setOpen(!open)}>
               <img src={currentUser.img || "/img/accessibility.png"} alt="" />
               <span>{currentUser?.username}</span>
@@ -79,6 +79,15 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+          ) : (
+            <>
+              <Link to="/login" className="link">
+                Sign in
+              </Link>
+              <Link className="link" to="/register">
+                <button>Join</button>
+              </Link>
+            </>
           )}
         </div>
       </div>
