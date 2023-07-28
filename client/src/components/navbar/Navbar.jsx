@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import newRequest from "../../utils/newRequest";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -22,9 +23,13 @@ const Navbar = () => {
   }, []);
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const navigate = useNavigate();
+
   const handleLogout = async () => {
     try {
       await newRequest.post("/auth/logout");
+      localStorage.setItem("currentUser", null);
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -43,7 +48,7 @@ const Navbar = () => {
           <span>Freelance Business</span>
           <span>Explore</span>
           <span>English</span>
-          <span>Sign in</span>
+
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <button>Join</button>}
           {currentUser && (
