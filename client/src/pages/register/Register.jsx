@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Register.scss";
+import axios from "axios";
 // import upload from "../../utils/upload";
 import newRequest from "../../utils/newRequest";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +16,20 @@ function Register() {
     isSeller: false,
     desc: "",
   });
+
+  const upload = async (file) => {
+    const data = new FormData();
+    data.append("file", file);
+    data.append("upload_preset", "freelance-portal");
+
+    try {
+      const res = await axios.post(
+        "https://api.cloudinary.com/v1_1/sandeshacharya/image"
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const navigate = useNavigate();
 
